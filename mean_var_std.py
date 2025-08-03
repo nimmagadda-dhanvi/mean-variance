@@ -1,14 +1,14 @@
 import numpy as np
 
 def calculate(numbers):
-    # Check if the input list contains exactly 9 numbers
+   
     if len(numbers) != 9:
         raise ValueError("List must contain nine numbers.")
     
-    # Convert the input list to a 3x3 NumPy array
+    
     matrix = np.array(numbers).reshape(3, 3)
     
-    # Calculate the statistics
+   
     mean = [
         matrix.mean(axis=0).tolist(),  # mean of each column
         matrix.mean(axis=1).tolist(),  # mean of each row
@@ -45,7 +45,7 @@ def calculate(numbers):
         matrix.sum().tolist()          # sum of the flattened matrix
     ]
     
-    # Return the result in the specified format
+    
     return {
         'mean': mean,
         'variance': variance,
@@ -56,7 +56,8 @@ def calculate(numbers):
     }
 from mean_var_std import calculate
 
-# Sample test
+
 numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 result = calculate(numbers)
 print(result)  # This should display output in the terminal
+
